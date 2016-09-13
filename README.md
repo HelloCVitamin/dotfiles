@@ -1,4 +1,8 @@
 
-My openbox configuration files
+### My openbox configuration files
 
-To clone in $HOME/.dotfiles
+```
+   git clone git@github.com:leadrien/dotfiles.git ~/.dotfiles
+   cd .dotfiles
+   sudo -E ./configure.sh
+```

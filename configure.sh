@@ -7,26 +7,26 @@ if ! [ $(id -u) = 0 ]; then
 fi
 
 # delete
-rm $HOME/.config/openbox/autostart
-rm $HOME/.config/openbox/rc.xml
-rm $HOME/.config/tint2/tint2rc
-rm $HOME/.config/xfce4/terminal/terminalrc
-rm $HOME/.zsh_aliases
-rm $HOME/.zshenv
-rm $HOME/.zshrc
-rm $HOME/.tmux.conf
-rm $HOME/.gvimrc
-rm $HOME/.vimrc
-rm -r $HOME/.vim
-rm /usr/share/oh-my-zsh/custom/themes/adri.zsh-theme
-rm /usr/local/bin/ezchrome
-rm /usr/local/bin/ezgvim
-rm /usr/local/bin/ezskype
-rm /usr/local/bin/ezterminal
-rm /usr/local/bin/dmenu_recent_aliases
-rm /usr/local/bin/dmenu_solarized_light
-rm /usr/local/bin/dmenu_solarized_dark
-rm $HOME/.gitconfig
+# rm $HOME/.config/openbox/autostart
+# rm $HOME/.config/openbox/rc.xml
+# rm $HOME/.config/tint2/tint2rc
+# rm $HOME/.config/xfce4/terminal/terminalrc
+# rm $HOME/.zsh_aliases
+# rm $HOME/.zshenv
+# rm $HOME/.zshrc
+# rm $HOME/.tmux.conf
+# rm $HOME/.gvimrc
+# rm $HOME/.vimrc
+# rm -r $HOME/.vim
+# rm /usr/share/oh-my-zsh/custom/themes/adri.zsh-theme
+# rm /usr/local/bin/ezchrome
+# rm /usr/local/bin/ezgvim
+# rm /usr/local/bin/ezskype
+# rm /usr/local/bin/ezterminal
+# rm /usr/local/bin/dmenu_recent_aliases
+# rm /usr/local/bin/dmenu_solarized_light
+# rm /usr/local/bin/dmenu_solarized_dark
+# rm $HOME/.gitconfig
 
 
 # Openbox
