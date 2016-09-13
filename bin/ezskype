@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/apulse32 /usr/bin/skype  %U

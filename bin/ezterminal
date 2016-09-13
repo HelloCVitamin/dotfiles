@@ -1,0 +1,5 @@
+#!/bin/bash
+maintmux=ezterminal
+if ! wmctrl -a $maintmux; then
+    xfce4-terminal --title="ezterminal" -e "tmux -2"
+fi

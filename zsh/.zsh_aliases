@@ -1,0 +1,10 @@
+alias lll='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -lh | less'
+alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias ll='ls -lh --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+alias grep='grep --color=tty -d skip'
+alias cp="cp -i"                          # confirm before overwriting something
+alias g='gvim --remote-silent'
+alias o='xdg-open'
+alias df='df -h'
+alias grep='grep --color=auto'

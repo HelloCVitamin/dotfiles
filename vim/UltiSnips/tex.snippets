@@ -1,0 +1,70 @@
+snippet tt "texttt" !w
+\texttt{$1}$0
+endsnippet
+
+snippet bf "textbf" !w
+\textbf{$1}$0
+endsnippet
+
+snippet it "textit" !w
+\textit{$1}$0
+endsnippet
+
+snippet emph "emph" !w
+\emph{$1}$0
+endsnippet
+
+snippet /fig|img/ "Figure" !br
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[scale=1]{$1}
+\end{center}
+\caption{$2}
+\label{fig:$3}
+\end{figure}
+$0
+endsnippet
+
+snippet figcol "Figure" !b
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{$1}
+	\captionof{figure}{$2}
+\end{Figure}
+$0
+endsnippet
+
+snippet col "Column" !b
+\begin{multicols}{2}
+$0
+\columnbreak
+\end{multicols}
+endsnippet
+
+snippet tab "Table" !b
+\begin{table}[h]
+    \begin{center}
+        \begin{tabular}{$1}
+            \hline
+			$0
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{$2}
+    \label{tab:$3}
+\end{table}
+endsnippet
+
+snippet footu "footnote url" !w
+\footnote{\url{$1}}$0
+endsnippet
+
+snippet foot "footnote" !w
+\footnote{$1}$0
+endsnippet
+
+snippet lst "lstlisting" !b
+\begin{lstlisting}[language=$1]
+$0
+\end{lstlisting}
+endsnippet

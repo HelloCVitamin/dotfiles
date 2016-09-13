@@ -1,0 +1,4 @@
+#!/bin/bash
+if ! wmctrl -a "chrome"; then
+    google-chrome-stable
+fi
