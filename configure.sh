@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# A lancer comme root
-if ! [ $(id -u) = 0 ]; then
-   echo "Use with sudo -E"
-   exit 1
-fi
 
 # delete
 # rm $HOME/.config/openbox/autostart
@@ -43,8 +38,6 @@ mkdir -p $HOME/.config/xfce4/terminal/
 ln -sv $PWD/xfce4-terminal/terminalrc $HOME/.config/xfce4/terminal/terminalrc
 
 # zsh
-mkdir -p /usr/share/oh-my-zsh/custom/themes/
-ln -sv $PWD/zsh/adri.zsh-theme /usr/share/oh-my-zsh/custom/themes/adri.zsh-theme
 ln -sv $PWD/zsh/.zsh_aliases $HOME/.zsh_aliases
 ln -sv $PWD/zsh/.zshenv $HOME/.zshenv
 ln -sv $PWD/zsh/.zshrc $HOME/.zshrc
@@ -63,16 +56,8 @@ ruby extconf.rb
 make
 cd -
 
-# bin
-ln -sv $PWD/bin/ezchrome /usr/local/bin/ezchrome
-ln -sv $PWD/bin/ezgvim /usr/local/bin/ezgvim
-ln -sv $PWD/bin/ezskype /usr/local/bin/ezskype
-ln -sv $PWD/bin/ezterminal /usr/local/bin/ezterminal
-ln -sv $PWD/bin/dmenu_recent_aliases /usr/local/bin/dmenu_recent_aliases
-ln -sv $PWD/bin/dmenu_solarized_light /usr/local/bin/dmenu_solarized_light
-ln -sv $PWD/bin/dmenu_solarized_dark /usr/local/bin/dmenu_solarized_dark
-
 # git
 ln -sv $PWD/git/.gitconfig $HOME/.gitconfig
 
-
+# config as root
+sudo -E ./configure_root.sh
