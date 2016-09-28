@@ -446,7 +446,8 @@ endfunction
 " Set up the window colors and size
 "-----------------------------------------------------------------------------
 if has("gui_running")
-    set lines=100 columns=100
+    "set lines=100 columns=100
+    set lines=999 columns=999
     "font for windows:
     "set guifont=courier_new:h12
     "font for linux:

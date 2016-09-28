@@ -42,7 +42,7 @@
   <theme>
     <!-- <name>Carbon</name> -->
     <!-- Put Adricarbon in ~/.local/share/themes -->
-    <name>TropicBomb</name>
+    <name>Numix-ArchBlue</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
           available characters are NDSLIMC, each can occur at most once.
@@ -57,21 +57,21 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>sans</name>
-      <size>8</size>
+      <name>Sans</name>
+      <size>11</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>sans</name>
-      <size>8</size>
+      <name>Sans</name>
+      <size>11</size>
       <!-- font size in points -->
-      <weight>bold</weight>
+      <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
-      <slant>normal</slant>
+      <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
@@ -378,13 +378,13 @@
       </action>
     </keybind>
     <keybind key="W-m">
-        <action name="Execute">
-            <startupnotify>
-                <enabled>true</enabled>
-                <name>dmenu</name>
-            </startupnotify>
-            <command>dmenu_solarized_dark</command>
-        </action>
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>dmenu</name>
+        </startupnotify>
+        <command>dmenu_solarized_dark</command>
+      </action>
     </keybind>
     <keybind key="W-x">
       <action name="Execute">
