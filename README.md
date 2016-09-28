@@ -7,8 +7,9 @@
    ./configure.sh
 ```
 
-#### To install from manjaro net install
+#### To install from manjaro net install:
 
+```
 base-devel
 openbox
 oblogout obconf obmenu openbox-themes
@@ -22,11 +23,6 @@ zsh
 zsh-completions
 oh-my-zsh
 
-Set zsh as deflaut shell:
-```
-    chsh -s /usb/bin/zsh
-```
-
 wmctrl compton nitrogen
 thunar thunar-volman
 dmenu-manjaro
@@ -34,3 +30,10 @@ network-manager-applet
 gvfs
 pyxdg
 pnmixer
+```
+
+Set zsh as deflaut shell:
+```
+    chsh -s /usb/bin/zsh
+```
+
