@@ -4,7 +4,7 @@
 ```
    git clone git@github.com:leadrien/dotfiles.git ~/.dotfiles
    cd .dotfiles
-   ./configure.sh
+   ./configure.sh single|multi
 ```
 
 #### To install from manjaro net install:
