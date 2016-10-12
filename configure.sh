@@ -1,6 +1,20 @@
 #!/bin/bash
 
 
+if [ "$#" -ne 1 ]; then
+    echo "Usage: ./configure.sh single|multi"
+    exit 1
+fi
+
+if [ "$1" == "single" ]; then
+    echo $1
+elif [ "$1" == "multi" ]; then
+    echo $1
+else
+    echo "Usage: ./configure.sh single|multi"
+    exit 1
+fi
+
 # delete
 # rm $HOME/.config/openbox/autostart
 # rm $HOME/.config/openbox/rc.xml
@@ -23,15 +37,22 @@
 # rm /usr/local/bin/dmenu_solarized_dark
 # rm $HOME/.gitconfig
 
-
 # Openbox
 mkdir -p $HOME/.config/openbox/
 ln -sv $PWD/openbox/autostart $HOME/.config/openbox/autostart
-ln -sv $PWD/openbox/rc.xml $HOME/.config/openbox/rc.xml
+if [ "$1" == "multi" ]; then
+    ln -sv $PWD/openbox/rc_multihead.xml $HOME/.config/openbox/rc.xml
+else
+    ln -sv $PWD/openbox/rc.xml $HOME/.config/openbox/rc.xml
+fi
 
 # Tint2
 mkdir -p $HOME/.config/tint2/
-ln -sv $PWD/tint2/tint2rc $HOME/.config/tint2/tint2rc
+if [ "$1" == "multi" ]; then
+    ln -sv $PWD/tint2/tint2rc_multihead $HOME/.config/tint2/tint2rc
+else
+    ln -sv $PWD/tint2/tint2rc $HOME/.config/tint2/tint2rc
+fi
 
 # xfce4-terminal
 mkdir -p $HOME/.config/xfce4/terminal/
