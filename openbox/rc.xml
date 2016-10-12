@@ -378,13 +378,13 @@
       </action>
     </keybind>
     <keybind key="W-m">
-        <action name="Execute">
-            <startupnotify>
-                <enabled>true</enabled>
-                <name>dmenu</name>
-            </startupnotify>
-            <command>dmenu_solarized_dark</command>
-        </action>
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>dmenu</name>
+        </startupnotify>
+        <command>dmenu_solarized_dark</command>
+      </action>
     </keybind>
     <keybind key="W-x">
       <action name="Execute">
@@ -507,6 +507,30 @@
         <action name="SendToDesktop">
           <to>next</to>
         </action>
+      </mousebind>
+      <!-- Split windows to left -->
+      <mousebind button="W-Left" action="Click">
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+              <x>0</x>
+              <y>0</y>
+              <width>50%</width>
+              <height>100%</height>
+          </action>
+      </mousebind>
+      <!-- Split windows to right -->
+      <mousebind button="W-Right" action="Click">
+          <action name="UnmaximizeFull"/>
+          <action name="MoveResizeTo">
+              <x>1/2</x>
+              <y>0</y>
+              <width>50%</width>
+              <height>100%</height>
+          </action>
+      </mousebind>
+      <!-- Split windows to right -->
+      <mousebind button="W-Middle" action="Click">
+          <action name="Maximize"/>
       </mousebind>
     </context>
     <context name="Titlebar">
