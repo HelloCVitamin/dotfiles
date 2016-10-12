@@ -35,3 +35,6 @@ xset -dpms; xset s off &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
+
+# dual screen
+xrandr --auto --output DFP1 --mode 1920x1200 --left-of DFP2
