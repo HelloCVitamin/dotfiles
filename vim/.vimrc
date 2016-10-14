@@ -29,6 +29,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'lervag/vimtex'
 " colors
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
@@ -276,10 +277,6 @@ set tags+=~/.vim/tags/sdl
 "nmap <C-F12> :!ctags -R --language-force=java --fields=+iaS --extra=+q .<CR>
 "-------------------/TAGS------------------------------------
 
-" Map F5 depending on filetype
-" Latex save and compile
-autocmd Filetype tex map <buffer> <F5> :w \| Latexmk<CR>
-
 " run the current python script and write stdout and stderr into a named
 " pipe /tmp/mypipe in order to display the result with namedpipe.py
 " Used for hepia system d'expoitation
@@ -379,10 +376,16 @@ let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
             \ '\.embed\.manifest$', '\.embed\.manifest.res$',
             \ '\.intermediate\.manifest$', '^mt.dep$' ]
 
+
 "-----------------------------------------------------------------------------
-" YouCompleteME
+" VIMTEX
 "-----------------------------------------------------------------------------
-let g:ycm_auto_trigger = 0
+" ignore some warnings
+let g:vimtex_quickfix_ignored_warnings = [
+        \ 'Underfull',
+        \ 'Overfull',
+        \ 'specifier changed to',
+      \ ]
 
 "-----------------------------------------------------------------------------
 " FLAKE8
