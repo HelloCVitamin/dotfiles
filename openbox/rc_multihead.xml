@@ -42,7 +42,7 @@
   <theme>
     <!-- <name>Carbon</name> -->
     <!-- Put Adricarbon in ~/.local/share/themes -->
-    <name>TropicBomb</name>
+    <name>Numix-ArchBlue</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
           available characters are NDSLIMC, each can occur at most once.
@@ -441,8 +441,32 @@
         <command>amixer set Master toggle</command>
       </action>
     </keybind>
-  </keyboard>
-  <mouse>
+    <!-- Split windows to left -->
+    <keybind key="W-A-h">
+        <action name="UnmaximizeFull"/>
+        <action name="MoveResizeTo">
+            <x>0</x>
+            <y>0</y>
+            <width>50%</width>
+            <height>100%</height>
+        </action>
+    </keybind>
+    <!-- Split windows to right -->
+    <keybind key="W-A-l">
+        <action name="UnmaximizeFull"/>
+        <action name="MoveResizeTo">
+            <x>1/2</x>
+            <y>0</y>
+            <width>50%</width>
+            <height>100%</height>
+        </action>
+    </keybind>
+    <!-- Maximize -->
+    <keybind key="W-A-k">
+        <action name="Maximize"/>
+    </keybind>
+</keyboard>
+<mouse>
     <dragThreshold>1</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
     <doubleClickTime>200</doubleClickTime>
