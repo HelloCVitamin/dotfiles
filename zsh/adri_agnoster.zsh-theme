@@ -67,7 +67,7 @@ prompt_end() {
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
   if [[ -n $SSH_CONNECTION ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$ssh"
+    prompt_segment magenta black "%(!.%{%F{yellow}%}.)ssh"
   fi
   # if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
   #   prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
