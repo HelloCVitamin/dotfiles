@@ -7,6 +7,11 @@
    ./configure.sh single|multi
 ```
 
+##### Solarized colors, tint2 panel, zsh, tmux
+
+![dotfiles](screen.png)
+
+
 #### To install from manjaro net install:
 
 ```
