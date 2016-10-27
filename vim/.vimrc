@@ -29,6 +29,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 Plugin 'lervag/vimtex'
 " colors
 Plugin 'altercation/vim-colors-solarized'
@@ -48,7 +50,7 @@ filetype plugin indent on    " required
 
 "set the theme / colorscheme
 set background=dark
-colorscheme base16-solarized-dark
+colorscheme solarized
 
 set encoding=utf-8
 
@@ -191,9 +193,6 @@ set complete=.,w,b
 
 " When completing by tag, show the whole tag, not just the function name
 set showfulltag
-
-" Set the textwidth to be 120 chars
-" set textwidth=120
 
 " get rid of the silly characters in window separators
 set fillchars=""
@@ -353,6 +352,14 @@ let g:jedi#auto_close_doc = 0
 let g:jedi#force_py_version = 2
 
 "-----------------------------------------------------------------------------
+" RUST
+"-----------------------------------------------------------------------------
+set hidden
+let g:racer_cmd = "/usr/bin/racer"
+let $RUST_SRC_PATH="~/git_projects/rust/src/"
+let g:racer_experimental_completer = 1
+
+"-----------------------------------------------------------------------------
 " Eclim
 "-----------------------------------------------------------------------------
 "nmap ,jc : JavaCorrect<cr>
@@ -387,6 +394,13 @@ let g:vimtex_quickfix_ignored_warnings = [
         \ 'specifier changed to',
       \ ]
 
+augroup WrapLineInTeXFile
+    autocmd!
+    autocmd FileType tex setlocal wrap
+    " Set the textwidth to be 80 chars
+    set textwidth=80
+augroup END
+
 "-----------------------------------------------------------------------------
 " FLAKE8
 "-----------------------------------------------------------------------------
@@ -408,6 +422,7 @@ let g:vimtex_quickfix_ignored_warnings = [
 let g:syntastic_python_flake8_args = "--ignore=E501"
 " let g:syntastic_python_python_exec = '/usr/bin/python2'
 " let g:syntastic_python_python_exec = '/usr/bin/python3'
+let g:syntastic_rust_checkers = ['rustc']
 
 "-----------------------------------------------------------------------------
 " DELIMITMATE

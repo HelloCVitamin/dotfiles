@@ -14,6 +14,14 @@ snippet emph "emph" !w
 \emph{$1}$0
 endsnippet
 
+snippet i "item" !w
+\item $0
+endsnippet
+
+snippet ref "ref" !w
+~\ref{$1}$0
+endsnippet
+
 snippet /fig|img/ "Figure" !br
 \begin{figure}[h]
 \begin{center}
@@ -55,6 +63,14 @@ snippet tab "Table" !b
 \end{table}
 endsnippet
 
+snippet tabx "tabularx" !b
+\begin{tabularx}{15cm}{|c|p{4cm}|X|}
+    \hline
+	$0
+    \hline
+\end{tabularx}
+endsnippet
+
 snippet footu "footnote url" !w
 \footnote{\url{$1}}$0
 endsnippet
@@ -70,8 +86,10 @@ $0
 endsnippet
 
 snippet ezheader "ezheader" !b
+\usepackage{environ}
 \usepackage[tikz]{bclogo}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 
 \NewEnviron{ezremark}[1]
   {\par\medskip\noindent
