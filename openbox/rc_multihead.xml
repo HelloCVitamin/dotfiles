@@ -245,7 +245,7 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="W-h">
+    <keybind key="W-S-h">
         <!-- Split windows to left -->
         <action name="UnmaximizeFull"/>
         <action name="MoveResizeTo">
@@ -255,7 +255,7 @@
             <height>100%</height>
         </action>
     </keybind>
-    <keybind key="W-l">
+    <keybind key="W-S-l">
         <!-- Split windows to right -->
         <action name="UnmaximizeFull"/>
         <action name="MoveResizeTo">
@@ -265,7 +265,7 @@
             <height>100%</height>
         </action>
     </keybind>
-    <keybind key="W-j">
+    <keybind key="W-S-j">
         <!-- Split windows to bottom left -->
         <action name="UnmaximizeFull"/>
         <action name="MoveResizeTo">
@@ -275,7 +275,7 @@
             <height>50%</height>
         </action>
     </keybind>
-    <keybind key="W-k">
+    <keybind key="W-S-k">
         <!-- Split windows to top left -->
         <action name="UnmaximizeFull"/>
         <action name="MoveResizeTo">
@@ -285,7 +285,7 @@
             <height>50%</height>
         </action>
     </keybind>
-    <keybind key="W-o">
+    <keybind key="W-S-o">
         <!-- Maximise window -->
         <action name="ToggleMaximize">
             <direction>both</direction>
@@ -305,22 +305,22 @@
     </keybind>
 
     <!-- Keybindings for window selection -->
-    <keybind key="W-S-l">
+    <keybind key="W-l">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-h">
+    <keybind key="W-h">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-S-k">
+    <keybind key="W-k">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-S-j">
+    <keybind key="W-j">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
@@ -390,7 +390,7 @@
         <command>oblogout</command>
       </action>
     </keybind>
-    <keybind key="W-S-l">
+    <keybind key="W-C-S-l">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
