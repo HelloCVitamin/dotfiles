@@ -20,10 +20,10 @@ openbox
 oblogout obconf obmenu openbox-themes
 ruby
 xfce4-terminal
+xfce4-notifyd
 tmux
 git
 tint2
-dunst
 
 zsh
 zsh-completions

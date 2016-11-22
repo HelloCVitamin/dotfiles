@@ -19,7 +19,6 @@ fi
 # rm $HOME/.config/openbox/autostart
 # rm $HOME/.config/openbox/rc.xml
 # rm $HOME/.config/tint2/tint2rc
-# rm $HOME/.config/dunst/dunstrc
 # rm $HOME/.config/xfce4/terminal/terminalrc
 # rm $HOME/.zsh_aliases
 # rm $HOME/.zshenv
@@ -54,10 +53,6 @@ if [ "$1" == "multi" ]; then
 else
     ln -sv $PWD/tint2/tint2rc $HOME/.config/tint2/tint2rc
 fi
-
-# Dunst
-mkdir -p $HOME/.config/dunst/
-ln -sv $PWD/dunst/dunstrc $HOME/.config/dunst/dunstrc
 
 # xfce4-terminal
 mkdir -p $HOME/.config/xfce4/terminal/

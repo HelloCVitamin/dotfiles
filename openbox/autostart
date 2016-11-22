@@ -18,8 +18,6 @@ nitrogen --restore &
 (sleep 4s && opensnap --daemon) &
 (sleep 5s && pamac-tray) &
 
-# dunst     # started by dbus in /usr/share/dbus-1/services
-#
 
 #(sleep 6s; light-locker) &		# started automatically (in /etc/xdg/autostart)
 #(sleep 7s; xfce4-power-manager) &	# started automatically (in /etc/xdg/autostart)
