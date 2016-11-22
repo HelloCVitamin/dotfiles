@@ -9,16 +9,23 @@ nitrogen --restore &
 
 ## Startup
 # Volume
-(sleep 2s && pnmixer) &
+# (sleep 2s && pnmixer) &
+# (sleep 2s && pa-applet) &
+(sleep 2s && pasystray) &
+
 (sleep 3s && numlockx) &
 # Aero snap: https://github.com/lawl/opensnap
 (sleep 4s && opensnap --daemon) &
 (sleep 5s && pamac-tray) &
 
+# dunst     # started by dbus in /usr/share/dbus-1/services
+#
+
 #(sleep 6s; light-locker) &		# started automatically (in /etc/xdg/autostart)
 #(sleep 7s; xfce4-power-manager) &	# started automatically (in /etc/xdg/autostart)
 #(sleep 8s && nm-applet) & 		# started automatically (in /etc/xdg/autostart)
-#(sleep 9s && clipit) & 		# started automatically (in /etc/xdg/autostart)
+
+
 
 # Disable caplslock
 (sleep 6s && setxkbmap -option ctrl:nocaps) &

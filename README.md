@@ -23,6 +23,7 @@ xfce4-terminal
 tmux
 git
 tint2
+dunst
 
 zsh
 zsh-completions
@@ -34,7 +35,11 @@ dmenu-manjaro
 network-manager-applet
 gvfs
 pyxdg
-pnmixer
+
+~~pnmixer~~
+pulseaudio
+pasystray
+
 ```
 
 Set zsh as deflaut shell:
