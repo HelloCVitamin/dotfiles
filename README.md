@@ -36,7 +36,6 @@ network-manager-applet
 gvfs
 pyxdg
 
-~~pnmixer~~
 pulseaudio
 pasystray
 
