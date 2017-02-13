@@ -79,6 +79,9 @@ SAVEHIST=100000
 export HISTFILE SAVEHIST
 setopt HIST_IGNORE_DUPS
 
+unsetopt cdablevars
+
+
 
 # FZF
 # https://github.com/junegunn/fzf
