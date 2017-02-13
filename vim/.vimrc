@@ -1,52 +1,53 @@
-"-----------------------------------------------------------------------------
-" VUNDLE
-"-----------------------------------------------------------------------------
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"-----------------------------------------------------------------------------
+" PLUG
+"-----------------------------------------------------------------------------
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
 
-Plugin 'vim-scripts/bufkill.vim'
-Plugin 'wincent/Command-T'
-Plugin 'Raimondi/delimitMate'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'tmhedberg/matchit'
-Plugin 'yegappan/mru'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'lervag/vimtex'
+Plug 'vim-scripts/bufkill.vim'
+Plug 'wincent/Command-T', { 'on':  ['CommandT', 'CommandTMRU'] }
+Plug 'Raimondi/delimitMate'
+Plug 'davidhalter/jedi-vim', { 'for':  'python' }
+Plug 'tmhedberg/matchit'
+Plug 'yegappan/mru', { 'on':  'MRU' }
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'majutsushi/tagbar'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'racer-rust/vim-racer', { 'for': 'tex' }
+Plug 'lervag/vimtex', { 'for': 'tex' }
 " colors
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/base16-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
 
+" Initialize plugin system
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-
-filetype plugin indent on    " required
 "-----------------------------------------------------------------------------
-" /VUNDLE
+" /PLUG
 "-----------------------------------------------------------------------------
+
 
 "A lot of the config comes from https://github.com/derekwyatt/vim-config
 
+
+filetype plugin indent on    " required
+
+" Switch on syntax highlighting.
+syntax enable
 
 "set the theme / colorscheme
 set background=dark
@@ -131,9 +132,6 @@ set showcmd
 
 " Show the current mode
 set showmode
-
-" Switch on syntax highlighting.
-syntax on
 
 " Hide the mouse pointer while typing
 set mousehide

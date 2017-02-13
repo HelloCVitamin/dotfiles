@@ -70,9 +70,12 @@ ln -sv $PWD/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sv $PWD/vim/.gvimrc $HOME/.gvimrc
 ln -sv $PWD/vim/.vimrc $HOME/.vimrc
 ln -sv $PWD/vim $HOME/.vim
-git clone https://github.com/VundleVim/Vundle.vim.git $PWD/vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-cd $PWD/vim/bundle/Command-T/ruby/command-t
+#Vundle
+#git clone https://github.com/VundleVim/Vundle.vim.git $PWD/vim/bundle/Vundle.vim
+#vim +PluginInstall +qall
+#Plug
+curl -fLo $PWD/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+cd $PWD/vim/plugged/Command-T/ruby/command-t
 ruby extconf.rb
 make
 cd -
