@@ -173,6 +173,9 @@ set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 " lines from the bottom
 set scrolloff=8
 
+" no textwith (only in tex files, see vimtex plugin below)
+set textwidth=0
+
 " Allow the cursor to go in to "invalid" places
 set virtualedit=all
 
