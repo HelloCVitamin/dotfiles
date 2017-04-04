@@ -90,6 +90,9 @@ nnoremap <silent> <M-l> <C-W>l
 nnoremap <silent> <M-h> <C-W>h
 nnoremap <silent> <M-s> <C-W>s
 nnoremap <silent> <M-v> <C-W>v
+" toggle / swap two splitted buffer
+nnoremap <silent> <M-r> <C-W>r
+
 
 set autoindent
 
